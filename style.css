@@ -1,15 +1,49 @@
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 :root {
+    --text-color: #ccc;
     --accent-color: #2A8063;
-    --main-link-color: #909090;
+    --main-link-filter: invert(57%) brightness(100%);
+    --main-link-hover-filter: invert(85%) brightness(100%);
 }
 
-h1, h3 {
+body {
+    background-image: url("resources/background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header, .description, .text {
+    color: var(--text-color);
+}
+
+.header {
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: normal;
     display: inline;
 }
 
+.description, .text {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.description {
+    font-size: 1.3em;
+}
+
+.text {
+    font-size: 1.2em;
+}
+
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2em;
 }
 
 #linkIcons {
@@ -18,15 +52,36 @@ h1 {
 }
 
 #linkIcons img {
-    filter: invert(67%) sepia(18%) saturate(0%) hue-rotate(201deg) brightness(83%) contrast(84%);
-    margin-top: 0.75em;
-    width: 2.5em;
-    height: 2.5em;
+    position: relative;
+    top: 1.2em;
+    filter: var(--main-link-filter);
+    width: 2.75em;
+    height: 2.75em;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+}
+
+#linkIcons img:hover {
+    top: 1em;
+    filter: var(--main-link-hover-filter);
 }
 
 #linkIcons a {
     color: transparent;
-    margin-left: 1em;
+    margin-left: 1.5em;
+}
+
+hr {
+    border: 0.11em solid var(--text-color);
+    opacity: 50%;   
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+li {
+    margin-bottom: 1em;
 }
 
 strong {
