@@ -1,9 +1,32 @@
 :root {
     --accent-color: #2A8063;
+    --main-link-color: #909090;
 }
 
 h1, h3 {
     font-weight: normal;
+    display: inline;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+#linkIcons {
+    display: inline;
+    float: right;
+}
+
+#linkIcons img {
+    filter: invert(67%) sepia(18%) saturate(0%) hue-rotate(201deg) brightness(83%) contrast(84%);
+    margin-top: 0.75em;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#linkIcons a {
+    color: transparent;
+    margin-left: 1em;
 }
 
 strong {
@@ -16,11 +39,8 @@ strong {
     width: 75%;
 }
 
-#info {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100%;
+#mainContent > div {
+    margin-top: 5em;
 }
 
 #info {
@@ -32,6 +52,10 @@ strong {
     "a b"
     "c b";
 } 
+
+#info > div {
+    margin-bottom: 2em;
+}
 
 #workingOn {
     grid-area: a;
