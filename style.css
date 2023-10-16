@@ -1,0 +1,46 @@
+:root {
+    --accent-color: #2A8063;
+}
+
+h1, h3 {
+    font-weight: normal;
+}
+
+strong {
+    color: var(--accent-color);
+    font-weight: normal;
+}
+
+#mainContent {
+    margin: auto;
+    width: 75%;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-column-gap: 5vw;
+    grid-template-areas:
+    "a b"
+    "c b";
+} 
+
+#workingOn {
+    grid-area: a;
+}
+
+#projects {
+    grid-area: b;
+}
+
+#more {
+    grid-area: c;
+}
