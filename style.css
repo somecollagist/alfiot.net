@@ -1,6 +1,9 @@
 /* font imports */
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+/* color variables */
 
 :root {
     --text-color: #ccc;
@@ -10,16 +13,27 @@
     --project-link-filter: invert(80%) brightness(100%);
 }
 
+/* background */
+
 body {
-    background-image: url("resources/background.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url("resources/background.jpg") center/cover no-repeat fixed;
+    background-color: #12191F;
 }
 
-.header, .description, .text {
+/* text colors */
+
+.header,
+.description,
+.text {
     color: var(--text-color);
 }
+
+strong {
+    color: var(--accent-color);
+    font-weight: normal;
+}
+
+/* text fonts */
 
 .header {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -27,17 +41,12 @@ body {
     display: inline;
 }
 
-.description, .text {
+.description,
+.text {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.description {
-    font-size: 1.4em;
-}
-
-.text {
-    font-size: 1.2em;
-}
+/* text font sizes */
 
 h1 {
     font-size: 3.5em;
@@ -50,6 +59,48 @@ h2 {
 h3 {
     font-size: 1.5em;
 }
+
+.description {
+    font-size: 1.4em;
+}
+
+.text {
+    font-size: 1.2em;
+}
+
+/* horizontal rules */
+
+hr {
+    border: 0.11em solid var(--text-color);
+    opacity: 50%;
+}
+
+/* bulleted list spacing */
+
+ul {
+    padding-left: 1.2em;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+/* main div spacing */
+
+#mainContent {
+    margin: auto;
+    width: 75%;
+    max-width: 60em;
+    transition: opacity ease 0.5s;
+    transition-delay: 0.3s;
+}
+
+#me,
+#info {
+    margin-top: 4em;
+}
+
+/* top link icons */
 
 #linkIcons {
     display: inline;
@@ -67,7 +118,7 @@ h3 {
 }
 
 #linkIcons img:hover {
-    top: 1em;
+    top: 1.05em;
     filter: var(--main-link-hover-filter);
 }
 
@@ -76,32 +127,7 @@ h3 {
     margin-left: 1.5em;
 }
 
-hr {
-    border: 0.11em solid var(--text-color);
-    opacity: 50%;   
-}
-
-ul {
-    padding-left: 1.2em;
-}
-
-li {
-    margin-bottom: 1em;
-}
-
-strong {
-    color: var(--accent-color);
-    font-weight: normal;
-}
-
-#mainContent {
-    margin: auto;
-    width: 75%;
-}
-
-#mainContent > div {
-    margin-top: 4em;
-}
+/* secondary information divs */
 
 #info {
     display: grid;
@@ -109,11 +135,11 @@ strong {
     grid-template-rows: min-content 1fr;
     grid-column-gap: 5vw;
     grid-template-areas:
-    "a b"
-    "c b";
-} 
+        "a b"
+        "c b";
+}
 
-#info > div {
+#info>div {
     margin-bottom: 3em;
 }
 
@@ -129,6 +155,8 @@ strong {
     grid-area: c;
 }
 
+/* projects */
+
 .project {
     margin-top: 1.75em;
 }
@@ -142,6 +170,8 @@ strong {
     max-width: 100%;
     max-height: 15em;
 }
+
+/* project icons */
 
 .projectIcons {
     display: inline;
@@ -167,4 +197,71 @@ strong {
 .projectIcons a {
     color: transparent;
     margin-left: 0.5em;
+}
+
+
+/* enlightenment */
+
+.hidden {
+    display: none;
+}
+
+#enlightenment {
+    position: relative;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#enlightenmentButton {
+    background: transparent;
+    border: none;
+}
+
+#enlightenmentButton img {
+    width: 1.75em;
+    filter: var(--main-link-filter);
+    opacity: 95%;
+    transition-duration: 500ms;
+}
+
+#enlightenmentTooltip {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    margin-top: 0.5em;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 2em;
+    border-radius: 0.7em;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* animation */
+    opacity: 0;
+    bottom: 130%;
+    transition-duration: 0.3s;
+    user-select: none;
+}
+
+#enlightenmentTooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.5em;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.4) transparent transparent;
+}
+
+#enlightenmentButton:hover>img {
+    filter: var(--main-link-hover-filter);
+    transform: rotate(45deg);
+}
+
+#enlightenmentButton:hover+#enlightenmentTooltip {
+    bottom: 150%;
+    visibility: visible;
+    opacity: 1;
 }
