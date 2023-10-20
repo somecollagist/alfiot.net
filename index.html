@@ -1,109 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="preload" href="/resources/background.jpg" as="image"/>
-        <title>Alfiot.net</title>
-    </head>
-    <body>
-        <div id="mainContent">
-            <div id="me">
-                <h1 class="header">Hi, I'm <strong>Alfio</strong></h1>
-                <div id="linkIcons">
-                        <a href="https://github.com/p2js" rel="noreferrer" target="_blank">
-                            <img class="icon" src="resources/icons/github.svg" alt="Github"/>
-                        </a>
 
-                        <a href="https://instagram.com/no.moreideas" rel="noreferrer" target="_blank">
-                            <img class="icon" src="resources/icons/instagram.svg" alt="Instagram"/>
-                        </a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="/resources/background.jpg" as="image" />
+    <title>Alfiot.net</title>
+</head>
 
-                        <a href="mailto:tomarchioalfio5@gmail.com" rel="noreferrer" target="_blank">
-                            <img class="icon" src="resources/icons/email.svg" alt="Email me"/>
-                        </a>
+<body>
+    <div id="mainContent">
+        <div id="me">
+            <h1 class="header">Hi, I'm <strong>Alfio</strong></h1>
+            <div id="linkIcons">
+                <a href="https://github.com/p2js" rel="noreferrer" target="_blank">
+                    <img class="icon" src="resources/icons/github.svg" alt="Github" />
+                </a>
 
-                        <a href="https://discord.com/users/313350543835922432" rel="noreferrer" target="_blank">
-                            <img class="icon" src="resources/icons/discord.svg" alt="Discord"/>
-                        </a> 
-                </div>
+                <a href="https://instagram.com/no.moreideas" rel="noreferrer" target="_blank">
+                    <img class="icon" src="resources/icons/instagram.svg" alt="Instagram" />
+                </a>
+
+                <a href="mailto:tomarchioalfio5@gmail.com" rel="noreferrer" target="_blank">
+                    <img class="icon" src="resources/icons/email.svg" alt="Email me" />
+                </a>
+
+                <a href="https://discord.com/users/313350543835922432" rel="noreferrer" target="_blank">
+                    <img class="icon" src="resources/icons/discord.svg" alt="Discord" />
+                </a>
+            </div>
+            <hr />
+            <p class="description"><span id="age"></span><noscript>2005</noscript>, Italian <strong>|</strong> Studying
+                CS & Math <strong>@</strong> University of St Andrews</p>
+            <p class="description">Experience in JS, Rust, Java</p>
+        </div>
+
+        <div id="info">
+            <div id="workingOn">
+                <h2 class="header">What I'm working on</h2>
                 <hr />
-                <p class="description"><span id="age"></span><noscript>2005</noscript>, Italian <strong>|</strong> Studying CS & Math <strong>@</strong> University of St Andrews</p>
-                <p class="description">Experience in JS, Rust, Java</p>
+                <ul>
+                    <li class="text">
+                        <strong>Lex</strong>, a JS parser and interpreter for the lox language
+                    </li>
+                    <li class="text">
+                        <strong>Verbena</strong>, a powerful JS math function/expression input parser and transcompiler
+                        to native code
+                    </li>
+                </ul>
             </div>
-            
-            <div id="info">
-                <div id="workingOn">
-                    <h2 class="header">What I'm working on</h2>
-                    <hr />
-                    <ul>
-                        <li class="text">
-                            <strong>Lex</strong>, a JS parser and interpreter for the lox language
-                        </li>
-                        <li class="text">
-                            <strong>Verbena</strong>, a powerful JS math function/expression input parser and transcompiler to native code
-                        </li>
-                    </ul>
-                </div>
 
-                <div id="projects">
-                    <h2 class="header">Some of my projects</h2>
-                    <hr />
-                    <div class="project">
-                        <h3 class="header"><b>Shaditor</b></h3>
-                        <div class="projectIcons">
-                            <a href="/shaditor" rel="noreferrer" target="_blank">
-                                <img class="icon" src="resources/icons/link.svg" alt="Link"/>
-                            </a>
-                            <a href="https://github.com/p2js/shaditor" rel="noreferrer" target="_blank">
-                                <img class="icon" src="resources/icons/github.svg" alt="Github"/>
-                            </a>
-                        </div>
-                        <p class="text">A lightweight and fully client-side browser GLSL shader editor, with flexible frame controls and local saving.</p>
-                        <img class="projectThumbnail" src="resources/thumbnails/shaditor.png" alt="Project thumbnail"/>
+            <div id="projects">
+                <h2 class="header">Some of my projects</h2>
+                <hr />
+                <div class="project">
+                    <h3 class="header"><b>Shaditor</b></h3>
+                    <div class="projectIcons">
+                        <a href="/shaditor" rel="noreferrer" target="_blank">
+                            <img class="icon" src="resources/icons/link.svg" alt="Link" />
+                        </a>
+                        <a href="https://github.com/p2js/shaditor" rel="noreferrer" target="_blank">
+                            <img class="icon" src="resources/icons/github.svg" alt="Github" />
+                        </a>
                     </div>
-                    <div class="project">
-                        <h3 class="header"><b>Quick Graph</b></h3>
-                            <div class="projectIcons">
-                                <a href="https://github.com/p2js/electron-quick-graph" rel="noreferrer" target="_blank">
-                                    <img class="icon" src="resources/icons/github.svg" alt="Github"/>
-                                </a>
-                            </div>
-                            <p class="text">My final project for HS computer science, an electron app that can generate data visualizations from spreadsheet files.</p>
-                            <img class="projectThumbnail" src="resources/thumbnails/csia.png" alt="Project thumbnail" />
-                    </div>
-                    <div class="project">
-                        <h3 class="header"><b>Lemonchat</b></h3>
-                        <div class="projectIcons">
-                            <a href="https://lemonchat.p2js.repl.co" rel="noreferrer" target="_blank">
-                                <img class="icon" src="resources/icons/link.svg" alt="Link"/>
-                            </a>
-                            <a href="https://github.com/p2js/lemonchat" rel="noreferrer" target="_blank">
-                                <img class="icon" src="resources/icons/github.svg" alt="Github"/>
-                            </a>
-                        </div>
-                        <p class="text">A Socket.io based chat app with an old-web inspired design and some neat features.</p>
-                        <img class="projectThumbnail" src="resources/thumbnails/lemonchat.png" alt="Project thumbnail" />
-                    </div>
+                    <p class="text">A lightweight and fully client-side browser GLSL shader editor, with flexible frame
+                        controls and local saving.</p>
+                    <img class="projectThumbnail" src="resources/thumbnails/shaditor.png" alt="Project thumbnail" />
                 </div>
-
-                <div id="more">
-                    <h2 class="header">More about me</h2>
-                    <hr />
-                    <p class="text">Aside from programming, I also have a huge interest in math.</p>
-                </div>                
+                <div class="project">
+                    <h3 class="header"><b>Quick Graph</b></h3>
+                    <div class="projectIcons">
+                        <a href="https://github.com/p2js/electron-quick-graph" rel="noreferrer" target="_blank">
+                            <img class="icon" src="resources/icons/github.svg" alt="Github" />
+                        </a>
+                    </div>
+                    <p class="text">My final project for HS computer science, an electron app that can generate data
+                        visualizations from spreadsheet files.</p>
+                    <img class="projectThumbnail" src="resources/thumbnails/csia.png" alt="Project thumbnail" />
+                </div>
+                <div class="project">
+                    <h3 class="header"><b>Lemonchat</b></h3>
+                    <div class="projectIcons">
+                        <a href="https://lemonchat.p2js.repl.co" rel="noreferrer" target="_blank">
+                            <img class="icon" src="resources/icons/link.svg" alt="Link" />
+                        </a>
+                        <a href="https://github.com/p2js/lemonchat" rel="noreferrer" target="_blank">
+                            <img class="icon" src="resources/icons/github.svg" alt="Github" />
+                        </a>
+                    </div>
+                    <p class="text">A Socket.io based chat app with an old-web inspired design and some neat features.
+                    </p>
+                    <img class="projectThumbnail" src="resources/thumbnails/lemonchat.png" alt="Project thumbnail" />
+                </div>
             </div>
-            <img class="hidden" style="margin-top: 2em" src="resources/notepad.gif"/>
-            <div class="hidden" id="enlightenment">
-                <button id="enlightenmentButton">
-                    <img class="icon" src="resources/icons/sun.svg" alt="Disable enlightenment" />
-                </button>
-                <span id="enlightenmentTooltip" class="header">For the eyes of the enlightened</span>
+
+            <div id="more">
+                <h2 class="header">More about me</h2>
+                <hr />
+                <p class="text paragraph">
+                    My interest in programming and development started
+                    when I was in middle school, interested in making
+                    online tools such as a discord bot and an online
+                    chat app.
+                </p>
+                <p class="text paragraph">
+                    Since then, I've been working primarily in
+                    JavaScript, building up experience with Node.js
+                    and web frameworks like React and Svelte. However,
+                    I've also recently picked up Rust, which is what I
+                    plan on focusing on after going through my pending
+                    JS projects.
+                </p>
+                <p class="text paragraph">
+                    I'm also very interested in math, with a specific
+                    affinity for calculus and functions, as well as the
+                    more mathematical aspect of programming.
+                </p>
+                <p class="text paragraph">
+                    Aside from my areas of study, I'm a massive automotive
+                    enthusiast and fan of endurance racing, an amateur
+                    photographer, and I'm on a weekly radio show for the
+                    University of St Andrews' Star Radio!
+                </p>
+                <p class="text paragraph">
+                    Feel free to reach out via any of the links at the top
+                    if you wanna work with me on something or simply want
+                    to chat. :)
+                </p>
             </div>
         </div>
-        <img id="background" src="resources/background.jpg" />
-        <script src="main.js"></script>
-    </body>
+        <img class="hidden" style="margin-top: 2em" src="resources/notepad.gif" />
+        <div class="hidden" id="enlightenment">
+            <button id="enlightenmentButton">
+                <img class="icon" src="resources/icons/sun.svg" alt="Disable enlightenment" />
+            </button>
+            <span id="enlightenmentTooltip" class="header">For the eyes of the enlightened</span>
+        </div>
+    </div>
+    <img id="background" src="resources/background.jpg" />
+    <script src="main.js"></script>
+</body>
+
 </html>

@@ -30,7 +30,7 @@ function removeStyle() {
     button.setAttribute("style",
         `position: absolute;
         top: 2.25em;
-        right: 2em;`
+        right: 1em;`
     );
     tooltip.innerText = "";
 }
@@ -53,7 +53,7 @@ button.addEventListener("click", () => {
         window.scroll({ top: 0 });
         location.reload();
     }, 1200);
-    
+
     //write state to local storage
     localStorage.setItem("enlightened", enlightened ? 1 : "");
 });
