@@ -6,10 +6,11 @@ let age = Math.abs(diff.getUTCFullYear() - 1970);
 document.getElementById("age").innerText = age + ", ";
 
 // Enlightenment
-let button = document.getElementById("enlightenmentButton");
+let background = document.getElementById("background");
 let pageContent = document.getElementById("mainContent");
-let tooltip = document.getElementById("enlightenmentTooltip");
 let styleLink = document.querySelector('link[href="style.css"]');
+let button = document.getElementById("enlightenmentButton");
+let tooltip = document.getElementById("enlightenmentTooltip");
 let icons = document.querySelectorAll(".icon");
 let thumbnails = document.querySelectorAll(".projectThumbnail");
 
@@ -17,22 +18,10 @@ let thumbnails = document.querySelectorAll(".projectThumbnail");
 let enlightened = localStorage.getItem("enlightened");
 if (enlightened) removeStyle();
 
-// cover div used for transition to/from white 
-let cover = document.createElement("div");
-cover.setAttribute("style",
-    `position: fixed;
-    opacity: 0%;
-    top: 0;
-    left: 0;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    transition: opacity 500ms ease;`
-);
-
 // helper function to set retro style
 function removeStyle() {
-    styleLink.href = "";
+    document.body.removeChild(background);
+    document.head.removeChild(styleLink);
     icons.forEach(icon => {
         icon.src = "";
         if (icon.parentElement.tagName == "A") icon.style.marginRight = "1em";
@@ -49,24 +38,24 @@ function removeStyle() {
 button.addEventListener("click", () => {
     enlightened = !enlightened;
 
-    // transition smoothly to retro styling
-    document.body.appendChild(cover);
+    //transition smoothly to/from retro styling
     pageContent.style.opacity = 0;
-    setTimeout(() => cover.style.opacity = enlightened ? 1 : 0, 900);
-    
-    if (enlightened) {
+    background.style.opacity = 0;
+    if (!enlightened) {
+        document.body.appendChild(background);
+        background.style.transitionDelay = "0ms";
         setTimeout(() => {
-            removeStyle();
-            window.scroll({ top: 0 });
-        }, 1500);
-    } else {
-        cover.style.opacity = 1;
-        document.body.style.background = 'url("resources/background.jpg") center/cover no-repeat fixed';
-    }
-    setTimeout(() => { location.reload() }, 1800);
-
-    // write state to local storage
-    localStorage.setItem("enlightened", enlightened ? 1 : "");   
+            document.head.appendChild(styleLink);
+            background.style.opacity = 1;
+        }, 500);
+    };
+    setTimeout(() => {
+        window.scroll({ top: 0 });
+        location.reload();
+    }, 1500);
+    
+    //write state to local storage
+    localStorage.setItem("enlightened", enlightened ? 1 : "");
 });
 
 button.parentElement.classList.toggle("hidden");

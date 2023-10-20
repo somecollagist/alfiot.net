@@ -14,10 +14,15 @@
 }
 
 /* background */
-
-body {
-    background: url("resources/background.jpg") center/cover no-repeat fixed;
+#background {
+    z-index: -1;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #12191F;
+
+    transition: opacity 500ms ease 800ms;
 }
 
 /* text colors */
