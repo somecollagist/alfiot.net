@@ -22,7 +22,7 @@
     left: 0;
     background-color: #12191F;
 
-    transition: opacity 500ms ease 800ms;
+    transition: opacity 700ms ease 1000ms;
 }
 
 /* text colors */
@@ -96,7 +96,7 @@ li {
     margin: auto;
     width: 75%;
     max-width: 60em;
-    transition: opacity ease 0.5s;
+    transition: opacity ease 0.7s;
     transition-delay: 0.3s;
 }
 
@@ -212,6 +212,7 @@ li {
 }
 
 #enlightenment {
+    margin-top: -3em;
     position: relative;
     margin-bottom: 1em;
     text-align: center;
@@ -240,7 +241,7 @@ li {
     justify-content: center;
     width: 15em;
     height: 2em;
-    border-radius: 0.7em;
+    border-radius: 0.5em;
     background-color: rgba(0, 0, 0, 0.4);
     /* animation */
     opacity: 0;
