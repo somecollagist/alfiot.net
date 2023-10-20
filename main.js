@@ -52,7 +52,7 @@ button.addEventListener("click", () => {
     setTimeout(() => {
         window.scroll({ top: 0 });
         location.reload();
-    }, 1500);
+    }, 1200);
     
     //write state to local storage
     localStorage.setItem("enlightened", enlightened ? 1 : "");

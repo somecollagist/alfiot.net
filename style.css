@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-/* color variables */
+/* variables */
 
 :root {
     --text-color: #ccc;
@@ -11,9 +11,24 @@
     --main-link-filter: invert(57%) brightness(100%);
     --main-link-hover-filter: invert(85%) brightness(100%);
     --project-link-filter: invert(80%) brightness(100%);
+    --startup-animation-delay: 0.1s;
+}
+
+/* onload animation */
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(1.5em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* background */
+
 #background {
     z-index: -1;
     width: 100vw;
@@ -21,8 +36,7 @@
     top: 0;
     left: 0;
     background-color: #12191F;
-
-    transition: opacity 700ms ease 1000ms;
+    transition: opacity 0.7s ease 0.75s;
 }
 
 /* text colors */
@@ -97,12 +111,13 @@ li {
     width: 75%;
     max-width: 60em;
     transition: opacity ease 0.7s;
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
-#me,
-#info {
+#me {
     margin-top: 4em;
+    margin-bottom: 4em;
+    animation: 0.5s backwards var(--startup-animation-delay) 1 slide-in;
 }
 
 /* top link icons */
@@ -150,14 +165,17 @@ li {
 
 #workingOn {
     grid-area: a;
+    animation: 0.5s backwards ease calc(var(--startup-animation-delay) + 0.5s) 1 slide-in;
 }
 
 #projects {
     grid-area: b;
+    animation: 0.5s backwards ease calc(var(--startup-animation-delay) + 0.6s) 1 slide-in;
 }
 
 #more {
     grid-area: c;
+    animation: 0.5s backwards ease calc(var(--startup-animation-delay) + 0.7s) 1 slide-in;
 }
 
 /* projects */
