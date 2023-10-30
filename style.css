@@ -37,7 +37,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #12191F;
+    background-color: #121C25;
     transition: opacity 0.7s ease 0.75s;
 }
 
@@ -299,6 +299,11 @@ li {
 /* Mobile device support */
 
 @media only screen and (max-width: 800px) {
+    /* spacing */
+    #background {
+        min-height: 110vh;
+    }
+
     #mainContent {
         width: 95%;
     }
@@ -309,6 +314,10 @@ li {
         z-index: 3;
         left: 50%;
         transform: translate(-50%, 10em);
+    }
+
+    #linkIcons a+a {
+        margin-left: 2em;
     }
 
     #info {
@@ -348,6 +357,8 @@ li {
     .text {
         font-size: 1.2em;
     }
+
+    /* enlightenment */
 
     #enlightenmentTooltip {
         display: none;
