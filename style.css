@@ -299,9 +299,11 @@ li {
 /* Mobile device support */
 
 @media only screen and (max-width: 800px) {
+
     /* spacing */
     #background {
-        min-height: 110vh;
+        /* background hotfix for dynamic browser UIs */
+        min-height: 150vh;
     }
 
     #mainContent {
